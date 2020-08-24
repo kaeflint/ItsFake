@@ -23,10 +23,10 @@ my_parser.add_argument('--news_content',
 my_parser.add_argument('--model_type',
                        '-mt',
                        type=str,
-                       default='mlp',
+                       default='nb',
                        help='''Select the primary model from the option:
                        rf for randomforrest model,pa for passiveAggressive model,
-                       nb for the MultinormalNB model, mlp for the MLPCLassifier
+                       nb for the MultinormalNB model, lg for the Logistic Regression
                        ''')
 my_parser.add_argument('--load_all',
                        '-la',default=False,

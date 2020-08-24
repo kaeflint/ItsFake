@@ -14,10 +14,10 @@ my_parser = argparse.ArgumentParser(description='Fake New Detection System')
 my_parser.add_argument('--model_type',
                        '-mt',
                        type=str,
-                       default='mlp',
+                       default='nb',
                        help='''Select the primary model from the option:
                        rf for randomforrest model,pa for passiveAggressive model,
-                       nb for the MultinormalNB model, mlp for the MLPCLassifier
+                       nb for the MultinormalNB model, lg for the Logistic Regression
                        ''')
 my_parser.add_argument('--load_all',
                        '-la',default=False,
@@ -44,6 +44,10 @@ def detecting_fake_news():
     #call the predict_function
     #prob = load_model.predict_proba([var])
     pred_model= PredictionModel(load_all,model_type)
+    if not load_all:
+        print('Only one Classifier will be used')
+    else:
+        print('All available classifiers will be used')
     continue_state=True
     #Iterate untill the user cancels operation
     while True:
