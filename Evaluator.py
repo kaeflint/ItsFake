@@ -61,7 +61,7 @@ class PredictionModel:
         self.logistic = None
 
         if not load_all:
-            assert self.model_type.lower() in ['rf', 'pa', 'nb', 'logistic', 'randomforrest', 'passiveaggressive',
+            assert self.model_type.lower() in ['rf', 'pa', 'nb','lg', 'logistic', 'randomforrest', 'passiveaggressive',
                                                'multinormalnb', ], 'Specified model type not available'
         self.__build()
 
@@ -131,7 +131,7 @@ class PredictionModel:
                                      ),
                  'title_text_model': load('pretrained/documentclassifiers/pa.bz2'
                                           )}
-        elif self.model_type.lower() in ['logistic']:
+        elif self.model_type.lower() in ['logistic','lg']:
             if self.logistic:
                 self.main_model = self.logistic
             else:
