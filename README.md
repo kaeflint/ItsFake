@@ -21,7 +21,7 @@ You install the following  python packages using the command: pip install {the_p
 ### Project_drawingboardFinal.ipynb
 The Jupyter Notebook containing all the steps employed in the development along with discussions at each development step
 ### pretrained/
-Contains all the saved models for each sub-task.
+Contains all the saved models for each sub-task (i.e title classification, news body classification, and  title + body classification).
 ### utils/helpers.py
 This file contains some utility functions and classes employed. These includes, the BasicPreprocessor class and preprocessPipeLine are the document preprocessing unit and plotConfusionMatrix for plotting the confusion matrix. 
 ### run.py
