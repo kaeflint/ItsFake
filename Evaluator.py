@@ -72,35 +72,35 @@ class PredictionModel:
 
             self.passive = \
                 {'name': 'PassiveAggressive',
-                 'text_model': load('pretrained/textclassifiers/pa.joblib'
+                 'text_model': load('pretrained/textclassifiers/pa.bz2'
                                     ),
-                 'title_model': load('pretrained/titleclassifiers/pa.joblib'
+                 'title_model': load('pretrained/titleclassifiers/pa.bz2'
                                      ),
-                 'title_text_model': load('pretrained/documentclassifiers/pa.joblib'
+                 'title_text_model': load('pretrained/documentclassifiers/pa.bz2'
                                           )}
             self.rf = \
-                {'text_model': load('pretrained/textclassifiers/rf.joblib'
+                {'text_model': load('pretrained/textclassifiers/rf.bz2'
                                     ),
                  'name': 'RandomForrest',
-                 'title_model': load('pretrained/titleclassifiers/rf.joblib'
+                 'title_model': load('pretrained/titleclassifiers/rf.bz2'
                                      ),
-                 'title_text_model': load('pretrained/documentclassifiers/rf.joblib'
+                 'title_text_model': load('pretrained/documentclassifiers/rf.bz2'
                                           )}
             self.nb = \
-                {'text_model': load('pretrained/textclassifiers/nb.joblib'
+                {'text_model': load('pretrained/textclassifiers/nb.bz2'
                                     ),
                  'name': 'MultinormalNB',
-                 'title_model': load('pretrained/titleclassifiers/nb.joblib'
+                 'title_model': load('pretrained/titleclassifiers/nb.bz2'
                                      ),
-                 'title_text_model': load('pretrained/documentclassifiers/nb.joblib'
+                 'title_text_model': load('pretrained/documentclassifiers/nb.bz2'
                                           )}
             self.logistic = \
-                {'text_model': load('pretrained/textclassifiers/logistic.joblib'
+                {'text_model': load('pretrained/textclassifiers/logistic.bz2'
                                     ),
                  'name': 'Logistic',
-                 'title_model': load('pretrained/titleclassifiers/logistic.joblib'
+                 'title_model': load('pretrained/titleclassifiers/logistic.bz2'
                                      ),
-                 'title_text_model': load('pretrained/documentclassifiers/logistic.joblib'
+                 'title_text_model': load('pretrained/documentclassifiers/logistic.bz2'
                                           )}
             self.__load_model()
             self.all_models = [self.logistic, self.nb, self.rf, self.passive]
@@ -112,12 +112,12 @@ class PredictionModel:
                 self.main_model = self.rf
             else:
                 self.main_model = self.rf = \
-                {'text_model': load('pretrained/textclassifiers/rf.joblib'
+                {'text_model': load('pretrained/textclassifiers/rf.bz2'
                                     ),
                  'name': 'RandomForrest',
-                 'title_model': load('pretrained/titleclassifiers/rf.joblib'
+                 'title_model': load('pretrained/titleclassifiers/rf.bz2'
                                      ),
-                 'title_text_model': load('pretrained/documentclassifiers/rf.joblib'
+                 'title_text_model': load('pretrained/documentclassifiers/rf.bz2'
                                           )}
         elif self.model_type.lower() in ['pa', 'passive']:
             if self.passive:
@@ -125,35 +125,35 @@ class PredictionModel:
             else:
                 self.main_model = self.passive = \
                 {'name': 'PassiveAggressive',
-                 'text_model': load('pretrained/textclassifiers/pa.joblib'
+                 'text_model': load('pretrained/textclassifiers/pa.bz2'
                                     ),
-                 'title_model': load('pretrained/titleclassifiers/pa.joblib'
+                 'title_model': load('pretrained/titleclassifiers/pa.bz2'
                                      ),
-                 'title_text_model': load('pretrained/documentclassifiers/pa.joblib'
+                 'title_text_model': load('pretrained/documentclassifiers/pa.bz2'
                                           )}
         elif self.model_type.lower() in ['logistic']:
             if self.logistic:
                 self.main_model = self.logistic
             else:
                 self.main_model = self.logistic = \
-                {'text_model': load('pretrained/textclassifiers/logistic.joblib'
+                {'text_model': load('pretrained/textclassifiers/logistic.bz2'
                                     ),
                  'name': 'Logistic',
-                 'title_model': load('pretrained/titleclassifiers/logistic.joblib'
+                 'title_model': load('pretrained/titleclassifiers/logistic.bz2'
                                      ),
-                 'title_text_model': load('pretrained/documentclassifiers/logistic.joblib'
+                 'title_text_model': load('pretrained/documentclassifiers/logistic.bz2'
                                           )}
         elif self.model_type.lower() in ['nb', 'multinormalnb']:
             if self.nb:
                 self.main_model = self.nb
             else:
                 self.main_model = self.nb = \
-                {'text_model': load('pretrained/textclassifiers/nb.joblib'
+                {'text_model': load('pretrained/textclassifiers/nb.bz2'
                                     ),
                  'name': 'MultinormalNB',
-                 'title_model': load('pretrained/titleclassifiers/nb.joblib'
+                 'title_model': load('pretrained/titleclassifiers/nb.bz2'
                                      ),
-                 'title_text_model': load('pretrained/documentclassifiers/nb.joblib'
+                 'title_text_model': load('pretrained/documentclassifiers/nb.bz2'
                                           )}
 
     def predict(self, data, text_type='text',
