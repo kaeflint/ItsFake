@@ -53,6 +53,9 @@ def detecting_fake_news(title,text):
     #pred_model= PredictionModel(load_all,model_type)
     #call the predict_function
     #prob = load_model.predict_proba([var])
+    content_prediction = None
+    title_prediction = None
+    text_prediction = None
     pred_model= PredictionModel(load_all,model_type)
     if title.strip()!='':
         title_prediction= pred_model.predict(title,text_type='title',return_all_models=return_all)
