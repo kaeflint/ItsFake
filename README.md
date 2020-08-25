@@ -28,6 +28,7 @@ This file contains some utility functions and classes employed. These includes, 
 This file contains the routine for running the fake dectection in an interactive mode.
 ### systemcmd.py
 acccepts the news title and content in a command line, then returns the predicted labels.
+### 
 
 # Steps to install and use the program for prediction
 1. Clone this repository: git clone https://github.com/kaeflint/ItsFake.git
