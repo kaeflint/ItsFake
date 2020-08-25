@@ -10,7 +10,7 @@ For now only interactions using the command line is allowed, however the model c
 
 You install the following  python packages using the command: pip install {the_pack_name}
 
-2. Sklearn (scikit-learn) version 0.23.1
+2. Sklearn (scikit-learn) 
 3. numpy 
 4. pandas
 5. wordcloud 
@@ -20,8 +20,8 @@ You install the following  python packages using the command: pip install {the_p
 # Project Structure
 ### Project_drawingboardFinal.ipynb
 The Jupyter Notebook containing all the steps employed in the development along with discussions at each development step
-### trainedModels/
-Contains all the saved models
+### pretrained/
+Contains all the saved models for each sub-task.
 ### utils/helpers.py
 This file contains some utility functions and classes employed. These includes, the BasicPreprocessor class and preprocessPipeLine are the document preprocessing unit and plotConfusionMatrix for plotting the confusion matrix. 
 ### run.py
@@ -37,7 +37,7 @@ acccepts the news title and content in a command line, then returns the predicte
 Run **python run.py** with the following options
 * Make prediction based on all available models:  ***python run.py --load_all  --return_all**
 * Make prediction based with a specific model: python run.py --model_type {model_namel}
-Select the primary model from the option: rf for randomforrest model,pa for passiveAggressive model,nb for the MultinormalNB model, mlp for the MLPCLassifier
+Select the primary model from the option: rf for randomforrest model,pa for passiveAggressive model,nb for the MultinormalNB model, lg for the logisticRegression
 for example running ***python run.py --model_type rf** sets the primary model as the random forrest model.
 
 ####  For Command Mode:
