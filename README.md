@@ -14,7 +14,8 @@ You install the following  python packages using the command: pip install {the_p
 3. numpy 
 4. pandas
 5. wordcloud 
-
+6. voila 
+7. jupyter
 
 
 # Project Structure
@@ -27,12 +28,18 @@ This file contains some utility functions and classes employed. These includes, 
 ### run.py
 This file contains the routine for running the fake dectection in an interactive mode.
 ### systemcmd.py
-acccepts the news title and content in a command line, then returns the predicted labels.
-### 
+Accepts the news title and content on a command line, then returns the predicted labels.
+### ApplicationUI.ipynb
+Sample user interface consisting of two text field where the user can enter the title and news content. Pressing a button runs the prediction algorithm
 
 # Steps to install and use the program for prediction
 1. Clone this repository: git clone https://github.com/kaeflint/ItsFake.git
 2. Use the command **cd ItsFake/** Change the directory to the folder containing the program
+
+#### For User Interface Mode:
+Voila is leveraged to render the jupyter notebook {ApplicationUI.ipynb} as a webpage. 
+
+Run the command **voila ApplicationUI.ipynb --debug**
 
 ####  For Interactive Mode:
 Run **python run.py** with the following options
