@@ -211,8 +211,12 @@ def getJointLabels(predictions,content_type='news content'):
             if type(pred['probability_scores'])!=str:
                     probs.append(pred['probability_scores'])
     joint_label = Counter(labels).most_common(1)[0][0]
-    probs= np.array(probs)
-    probs=np.mean(probs,0)
+    
     print(f"The given {content_type} is: {joint_label}")
-    print(f'Chances of being fake is: {probs[0][0]}')
+    try:
+        probs= np.array(probs)
+        probs=np.mean(probs,0)
+        print(f'Chances of being fake is: {probs[0][0]}')
+    except:
+        pass
     return joint_label,probs
