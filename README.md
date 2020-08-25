@@ -1,7 +1,7 @@
 # ItsFake
 ![Test Image 1](wordclouds.png)
 This project employs different machine learning algorithms and nlp techniques to predict the authenticity of any given news articles as either fake or real. 
-For now only interactions using the command line is allowed, however the model can be deployed using frameworks including flask etc. 
+For now only interactions using the command line is allowed, however the model can be deployed using frameworks including flask (later) etc. 
 * The command prompt will request for the news title and news content, makes the prediction as a combination of the predictions based on only the title, only the content and both the title and news content. This allows the systems to employ different classifiers to achieve a better performance. Currently, the overall prediction is based on the majority voting aggregated by a function. 
 
 
@@ -37,8 +37,8 @@ acccepts the news title and content in a command line, then returns the predicte
 Run **python run.py** with the following options
 * Make prediction based on all available models:  ***python run.py --load_all  --return_all**
 * Make prediction based with a specific model: python run.py --model_type {model_namel}
-Select the primary model from the option: rf for randomforrest model,pa for passiveAggressive model,nb for the MultinormalNB model, lg for the logisticRegression
-for example running ***python run.py --model_type rf** sets the primary model as the random forrest model.
+Select the primary model from the option: rf for randomforest model,pa for passiveAggressive model,nb for the MultinormalNB model, lg for the logisticRegression
+for example running ***python run.py --model_type rf** sets the primary model as the random forest model.
 
 ####  For Command Mode:
 The Command mode accepts one news article at a time. Run **python systemcmd.py --load_all  --return_all --news_content '{'title':put_news_title_here,
