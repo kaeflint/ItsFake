@@ -39,6 +39,8 @@ Sample user interface consisting of two text field where the user can enter the 
 #### For User Interface Mode:
 Voila is leveraged to render the jupyter notebook {ApplicationUI.ipynb} as a webpage. 
 
+Visit https://github.com/voila-dashboards/voila for more information on the setup
+
 * Run the command **voila ApplicationUI.ipynb --debug**
 * Open your favorite browser and visit: http://localhost:8866/
 
